@@ -3,7 +3,6 @@ package com.qienclass.mailanduploaddemo.api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.view.RedirectView;
 
 import java.nio.file.Path;
 import java.util.Optional;
@@ -34,10 +33,10 @@ public class FileUploadEndpoints {
     }
 
     @PutMapping("/{id}")
-    public RedirectView updateFile(@PathVariable Long id,
+    public String updateFile(@PathVariable Long id,
                                    @RequestBody MultipartFile file) {
         Path filePath = this.fileService.updateById(id, file);
-        return new RedirectView(filePath.toUri().toString());
+        return filePath.toString();
     }
 
     @DeleteMapping("/{id}")
