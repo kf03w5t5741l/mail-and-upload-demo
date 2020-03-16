@@ -1,6 +1,6 @@
 # Spring Boot e-mail and file upload demo
 
-You will need access to an SMTP server, for instance by registering for a free account with [SendGrid](https://sendgrid.com/)
+You will need access to an SMTP server, for instance by registering for a free account with [SendGrid](https://sendgrid.com/).
 
 Requires specific additions to `application.properties`:
 ```
@@ -24,7 +24,7 @@ spring.mail.properties.mail.smtp.starttls.enable=true
 #spring.mail.properties.mail.smtp.socketFactory.class = javax.net.ssl.SSLSocketFactory
 ```
 
-For upload files, you need to specify your upload directory in `application.properties` as follows:
+For uploading files, you need to specify your upload directory in `application.properties` as follows:
 ```
 app.upload.dir=.
 ```
