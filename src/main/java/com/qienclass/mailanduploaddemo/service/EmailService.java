@@ -30,10 +30,10 @@ public class EmailService {
             helper.setFrom(email.getSenderAddress());
             helper.setSubject(email.getSubject());
             helper.setText(email.getMessage());
+            this.mailSender.send(message);
         } catch (MessagingException me) {
             me.printStackTrace();
         }
 
-        this.mailSender.send(message);
     }
 }
